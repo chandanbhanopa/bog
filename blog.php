@@ -48,7 +48,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	    	<a class="navbar-brand" href="index.php">Accounting</a>
+	    	<a class="navbar-brand" href="index.php">BOG</a>
 	    	<form action="#" class="searchform order-sm-start order-lg-last">
           <div class="form-group d-flex">
             <input type="text" class="form-control pl-3" placeholder="Search">
