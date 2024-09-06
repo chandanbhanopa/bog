@@ -30,9 +30,9 @@
 					<div class="row no-gutters slider-text align-items-center justify-content-center">
 						<div class="col-md-8 ftco-animate">
 							<div class="text w-100 text-center">
-								<h2>We Business Grow</h2>
+								<h2>We Support Business</h2>
 								<h1 class="mb-4">We Help You Businesses Innovate and Grow</h1>
-								<p><a href="#" class="btn btn-white">Connect with us</a></p>
+								<p><a href="contact.php" class="btn btn-white">Connect with us</a></p>
 							</div>
 						</div>
 					</div>
