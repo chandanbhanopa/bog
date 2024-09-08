@@ -53,7 +53,7 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Financial Services</h3>
-                <p>we offer a comprehensive suite of financial services tailored to meet the diverse needs of businesses and individuals. Our goal is to provide expert financial solutions that foster growth, streamline financial management, and mitigate risk.
+                <p>We offer a comprehensive suite of financial services tailored to meet the diverse needs of businesses and individuals. Our goal is to provide expert financial solutions that foster growth, streamline financial management, and mitigate risk.
                 </p>
               </div>
             </div>      

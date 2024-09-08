@@ -27,25 +27,22 @@
                                         <h2 class="footer-heading">Services</h2>
                                         <ul class="list-unstyled">
                                             <li>
-                                                <a href="#" class="py-1 d-block">Market Analysis</a>
+                                                <a href="market-analysis.php" class="py-1 d-block">Market Analysis</a>
                                             </li>
                                             <li>
-                                                <a href="#" class="py-1 d-block">Accounting Advisor</a>
+                                                <a href="accounting-adviser.php" class="py-1 d-block">Accounting Advisor</a>
                                             </li>
                                             <li>
-                                                <a href="#" class="py-1 d-block">General Consultancy</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="py-1 d-block">Structured Assestment</a>
+                                                <a href="general-consultancy.php" class="py-1 d-block">General Consultancy</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-md-4 mb-md-0 mb-4">
                                         <h2 class="footer-heading">Discover</h2>
                                         <ul class="list-unstyled">
-                                            <li><a href="#" class="py-1 d-block">About us</a></li>
+                                            <li><a href="about.php" class="py-1 d-block">About us</a></li>
                                             <li>
-                                                <a href="#" class="py-1 d-block">Contract us</a>
+                                                <a href="contact.php" class="py-1 d-block">Contract us</a>
                                             </li>
                                             <li>
                                                 <a href="#" class="py-1 d-block">Terms &amp; Conditions</a>
