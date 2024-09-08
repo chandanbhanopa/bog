@@ -39,11 +39,8 @@
 					<div class="heading-section pl-md-4 pt-md-5">
 						<span class="subheading">Welcome to Accounting</span>
 						<h2 class="mb-4">We Are the Best Accounting Agency</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-							Semantics, a large language ocean.</p>
-						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-							It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+						<p>At BOG, we specialize in delivering comprehensive accounting solutions and trading services tailored to meet the diverse needs of businesses across industries. With a commitment to accuracy, transparency, and efficiency, our accounting services cover everything from bookkeeping and financial reporting to tax compliance and strategic financial planning.</p>
+						<p>In the trading sector, we provide seamless import and export solutions, facilitating smooth global trade operations with expert logistics management, customs clearance, and risk mitigation strategies. Our experienced team is dedicated to helping your business grow, ensuring that both your financial and trading activities are optimized for success.</p>
 					</div>
 				</div>
 			</div>
@@ -96,112 +93,6 @@
 			</div>
 		</div>
 	</section>
-
-
-
-	<section class="ftco-section testimony-section bg-light">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row justify-content-center pb-5 mb-3">
-				<div class="col-md-7 heading-section heading-section-white text-center ftco-animate">
-					<span class="subheading">Testimonies</span>
-					<h2>Happy Clients &amp; Feedbacks</h2>
-				</div>
-			</div>
-			<div class="row ftco-animate">
-				<div class="col-md-12">
-					<div class="carousel-testimony owl-carousel ftco-owl">
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="icon d-flex align-items-center justify-content-center"><span
-										class="fa fa-quote-left"></span></div>
-								<div class="text">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries
-										Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="icon d-flex align-items-center justify-content-center"><span
-										class="fa fa-quote-left"></span></div>
-								<div class="text">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries
-										Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="icon d-flex align-items-center justify-content-center"><span
-										class="fa fa-quote-left"></span></div>
-								<div class="text">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries
-										Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="icon d-flex align-items-center justify-content-center"><span
-										class="fa fa-quote-left"></span></div>
-								<div class="text">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries
-										Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="icon d-flex align-items-center justify-content-center"><span
-										class="fa fa-quote-left"></span></div>
-								<div class="text">
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries
-										Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<section class="ftco-section ftco-no-pt bg-light ftco-faqs">
 		<div class="container">
 			<div class="row">

@@ -4,7 +4,6 @@
   	<?php include "includes/page_title.php";?>
   </head>
   <body>
-
     <div class="wrap">
 		<?php include "includes/header.php";?>
 	</div>
@@ -32,7 +31,7 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Accounting</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p>Focuses on preparing financial statements such as income statements, balance sheets, and cash flow statements. These are used by external parties (e.g., investors, creditors) to assess an organization's financial health.</p>
               </div>
             </div>      
           </div>
@@ -43,7 +42,7 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Tax, Compliance &amp; Payroll</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p> Deals with preparing tax returns and ensuring compliance with tax laws and regulations.</p>
               </div>
             </div>    
           </div>
@@ -54,7 +53,8 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Financial Services</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p>we offer a comprehensive suite of financial services tailored to meet the diverse needs of businesses and individuals. Our goal is to provide expert financial solutions that foster growth, streamline financial management, and mitigate risk.
+                </p>
               </div>
             </div>      
           </div>
@@ -64,8 +64,8 @@
             		<span class="flaticon-budget"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Growth &amp; Funding Access</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">Import &amp; Export</h3>
+                <p>We specialize in facilitating seamless international trade through our comprehensive export and import services. With a global network and expert knowledge of trade regulations, we help businesses expand their market reach and navigate the complexities of cross-border trade efficiently.</p>
               </div>
             </div>      
           </div>

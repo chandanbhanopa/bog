@@ -6,8 +6,7 @@
                     <div class="col-md-4 mb-md-0 mb-4">
                         <h2 class="footer-heading">About us</h2>
                         <p>
-                            A small river named Duden flows by their place and supplies it
-                            with the necessary regelialia.
+                        At BOG, we specialize in delivering comprehensive accounting solutions and trading services tailored to meet the diverse needs of businesses across industries.
                         </p>
                         <ul class="ftco-footer-social p-0">
                             <li class="ftco-animate">
