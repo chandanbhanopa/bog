@@ -36,11 +36,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-accountant:before { content: "\f100"; }
-.flaticon-accounting:before { content: "\f101"; }
-.flaticon-tax:before { content: "\f102"; }
-.flaticon-wealth:before { content: "\f103"; }
-.flaticon-accounting-1:before { content: "\f104"; }
-.flaticon-loan:before { content: "\f105"; }
-.flaticon-teamwork:before { content: "\f106"; }
-.flaticon-budget:before { content: "\f107"; }
+.flaticon-accountant:before { content: "\f100"; color:#93c7ff; }
+.flaticon-accounting:before { content: "\f101"; color:#93c7ff; }
+.flaticon-tax:before { content: "\f102"; color:#93c7ff; }
+.flaticon-wealth:before { content: "\f103"; color:#93c7ff; }
+.flaticon-accounting-1:before { content: "\f104"; color:#93c7ff; }
+.flaticon-loan:before { content: "\f105"; color:#93c7ff;}
+.flaticon-teamwork:before { content: "\f106";color:#93c7ff; }
+.flaticon-budget:before { content: "\f107";color:#93c7ff; }
