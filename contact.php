@@ -1,31 +1,3 @@
-<?php
-require_once "includes/config.php";
-$error = "";
-$post = $_POST;
-if(isset($post['send_message'])) {
-    $name = $post['name'];
-    $email = $post['email'];
-    $subject = $post['subject'];
-    $message = $post['message'];
-	if($post['name'] == "") {
-        $error = "Please enter your full name";
-    }
-
-	if($email == "") {
-        $error = "Please enter your email address";
-    }
-
-	if($subject == "") {
-        $error = "Please enter your subject";
-    }
-
-	if($message == "") {
-        $error = "Please enter your query";
-    }
-
-	
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
