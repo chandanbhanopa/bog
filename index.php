@@ -69,34 +69,9 @@
                 </div>
                 <div class="col-md-6 pl-md-5 py-md-5">
                     <div class="heading-section pl-md-4 pt-md-5">
+                        <h2 class="mb-4">About Us</h2>
                         <span class="subheading">Welcome to BOG</span>
                         <h2 class="mb-4">We Are the Best Accounting Agency</h2>
-                    </div>
-                    <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-wealth"></span>
-                        </div>
-                        <div class="text pl-4">
-                            <h4>Market Analysis</h4>
-                            <p>
-                                Unlock actionable insights with our comprehensive market analysis, helping your business
-                                identify trends, understand competitors, and make data-driven decisions for sustained
-                                growth.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-accountant"></span>
-                        </div>
-                        <div class="text pl-4">
-                            <h4>Accounting Advisor</h4>
-                            <p>
-                                Our Accounting Advisor services provide expert financial guidance to help businesses
-                                optimize their accounting practices, ensure regulatory compliance, and improve financial
-                                decision-making.
-                            </p>
-                        </div>
                     </div>
                     <div class="services-2 w-100 d-flex">
                         <div class="icon d-flex align-items-center justify-content-center">
