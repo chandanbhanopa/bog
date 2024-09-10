@@ -79,7 +79,7 @@
                         </div>
                         <div class="text pl-4">
                             <h4>General Consultancy</h4>
-                            <p>
+                            <p class="text-justify">
                                 Our General Consultancy services are designed to provide businesses with expert advice
                                 across a range of industries and operations.
                             </p>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="text pl-4">
                             <h4>Structured Assestment</h4>
-                            <p>
+                            <p class="text-justify">
                                 Our Structured Assessment service offers a systematic evaluation of your business
                                 processes, providing clear insights and actionable strategies to enhance performance and
                                 drive success.
@@ -113,7 +113,7 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Accounting</h3>
-                            <p>
+                            <p class="text-justify">
                                 Focuses on preparing financial statements such as income statements, balance sheets, and
                                 cash flow statements. These are used by external parties (e.g., investors, creditors) to
                                 assess an organization's financial health.
@@ -128,7 +128,7 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Tax, Compliance &amp; Payroll</h3>
-                            <p>
+                            <p class="text-justify">
                                 Deals with preparing tax returns and ensuring compliance with tax laws and regulations.
                             </p>
                         </div>
@@ -141,7 +141,7 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Financial Services</h3>
-                            <p>
+                            <p class="text-justify">
                                 We offer a comprehensive suite of financial services tailored to meet the diverse needs
                                 of businesses and individuals. Our goal is to provide expert financial solutions that
                                 foster growth, streamline financial management, and mitigate risk.
@@ -156,7 +156,7 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Import &amp; Export</h3>
-                            <p>We specialize in facilitating seamless international trade through our comprehensive export and import services. With a global network and expert knowledge of trade regulations, we help businesses expand their market reach and navigate the complexities of cross-border trade efficiently.</p>
+                            <p class="text-justify">We specialize in facilitating seamless international trade through our comprehensive export and import services. With a global network and expert knowledge of trade regulations, we help businesses expand their market reach and navigate the complexities of cross-border trade efficiently.</p>
                         </div>
                     </div>
                 </div>
