@@ -36,6 +36,9 @@ $url = str_replace("/","",$url);
                 <li class="nav-item  <?php echo $url == "blog.php" ? 'active' : '' ?>"">
                     <a href="blog.php" class="nav-link">Blog</a>
                 </li>
+                <li class="nav-item  <?php echo $url == "career.php" ? 'active' : '' ?>"">
+                    <a href="career.php" class="nav-link">Career</a>
+                </li>
                 <li class="nav-item  <?php echo $url == "contact.php" ? 'active' : '' ?>"">
                     <a href="contact.php" class="nav-link">Contact</a>
                 </li>
