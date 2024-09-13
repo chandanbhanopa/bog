@@ -33,63 +33,45 @@
                               <div class="form-message-success" class="mb-4">
                                  Your message was sent, thank you!
                               </div>
-                              <form method="POST" action="<?=$_SERVER['PHP_SELF']?>" id="contactForm" name="contactForm" class="contactForm">
-                                 <input type="hidden" name="request_type" value="contact" />
+                              <form method="POST" action="<?=$_SERVER['PHP_SELF']?>"  id="contactForm" name="contactForm" class="contactForm" enctype="multipart/form-data" @submit.prevent>
                                  <div class="row">
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <label class="label" for="name" x-text="fullNameLabel"></label>
-                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="name" id="fullname" placeholder="Name" >
-                                          <span class="error_fullname"></span>
+                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="name" id="fullname" placeholder="Name" x-model="formData.fullName" x-model.lazy="formData.fullName" x-on:blur="validateField()" >
+                                          <span class="error_fullname" x-show="formData.fullName.length  < 1">Enter your full name</span>
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <label class="label" for="email" x-text="emailLabel"></label>
                                           <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="email" id="email" placeholder="Email">
-                                          <li x-show="formData.email.length > 0" class="flex items-center py-1">
-                                             <div 
-                                                :class="{'bg-green-200 text-green-700': isEmail(formData.email),
-                                                'bg-red-200 text-red-700': !isEmail(formData.email)}"
-                                                class=" rounded-full p-1 fill-current ">
-                                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" 
-                                                   stroke="currentColor">
-                                                   <path
-                                                      x-show="isEmail(formData.email)"
-                                                      stroke-linecap="round" stroke-linejoin="round" 
-                                                      stroke-width="2" d="M5 13l4 4L19 7" />
-                                                   <path
-                                                      x-show="!isEmail(formData.email)"
-                                                      stroke-linecap="round" stroke-linejoin="round" 
-                                                      stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                             </div>
-                                             <span
-                                                :class="{'text-green-700': isEmail(formData.email), 
-                                                'text-red-700': !isEmail(formData.email)}"
-                                                class="font-medium text-sm ml-3"
-                                                x-text="isEmail(formData.email) ? 
-                                                'Email is valid' : 'Email is not valid!' "></span>
-                                          </li>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <label class="label" for="mobile" x-text="mobileLabel"></label>
+                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="mobile" id="mobile" placeholder="mobile number">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <label class="label" for="quanification" x-text="qualificationLabel"></label>
+                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="quanification" id="quanification" placeholder="Quanification">
                                        </div>
                                     </div>
                                     <div class="col-md-12">
                                        <div class="form-group">
-                                          <label class="label" for="subject" x-text="subjectLabel"></label>
-                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="subject" id="subject" placeholder="Subject">
+                                          <label class="label" for="resume" x-text="resumeLabel"></label>
+                                          <input type="file" name="resume" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" id="resume" cols="30" rows="4" placeholder="Message" />
                                        </div>
                                     </div>
                                     <div class="col-md-12">
                                        <div class="form-group">
-                                          <label class="label" for="#" x-text="messageLabel"></label>
-                                          <textarea name="message" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" id="message" cols="30" rows="4" placeholder="Message"></textarea>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                       <div class="form-group">
-                                          <button type="submit" id="submit" name="send_message" class="btn btn-primary" x-text="buttonLabel">
+                                          <button type="submit" id="submit" name="apply_for_job" value="apply" class="btn btn-primary" x-text="buttonLabel" x-bind="disableButton">
                                              <div class="submitting"></div>
                                           </button>
+
                                        </div>
                                     </div>
                                  </div>
@@ -125,6 +107,10 @@
       </section>
       <?php include "includes/footer.php";?>  
       <script type="text/javascript">
+
+         function postApi() {
+            console.log("Hello");
+         }
          function getData() {
              return {
                  formData : {
@@ -133,17 +119,22 @@
                      subject:"",
                      message:""
                  },
+                 disableButton:false,
                  status: false,
                  loading:false,
                  isError: false,
                  buttonLabel:"Apply",
                  fullNameLabel:"Full Name",
                  emailLabel:"Email Address",
-                 subjectLabel:"Your Subject",
-                 messageLabel:"Your Message",
+                 mobileLabel:"Mobile Number",
+                 resumeLabel :"Upload Your Resume",
+                 qualificationLabel : "Highest Quanification",
                  isEmail(email){
                      var re = /\S+@\S+\.\+S/;
                      return re.test(email);
+                 },
+                 validateField(){
+                  console.log("Chandan");
                  }
              }
          }
