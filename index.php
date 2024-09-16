@@ -69,9 +69,35 @@
                 </div>
                 <div class="col-md-6 pl-md-5 py-md-5">
                     <div class="heading-section pl-md-4 pt-md-5">
-                        <h2 class="mb-4">About Us</h2>
+                    <h2 class="mb-4">About Us</h2>
                         <span class="subheading">Welcome to BOG</span>
                         <h2 class="mb-4">We Are the Best Accounting Agency</h2>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="flaticon-wealth"></span>
+                        </div>
+                        <div class="text pl-4">
+                            <h4>Market Analysis</h4>
+                            <p class="text-justify">
+                                Unlock actionable insights with our comprehensive market analysis, helping your business
+                                identify trends, understand competitors, and make data-driven decisions for sustained
+                                growth.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="flaticon-accountant"></span>
+                        </div>
+                        <div class="text pl-4">
+                            <h4>Accounting Advisor</h4>
+                            <p class="text-justify">
+                                Our Accounting Advisor services provide expert financial guidance to help businesses
+                                optimize their accounting practices, ensure regulatory compliance, and improve financial
+                                decision-making.
+                            </p>
+                        </div>
                     </div>
                     <div class="services-2 w-100 d-flex">
                         <div class="icon d-flex align-items-center justify-content-center">
@@ -103,66 +129,7 @@
         </div>
     </section>
 
-    <section class="ftco-section bg-light ftco-no-pt">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
-                    <div class="d-block">
-                        <div class="icon d-flex mr-2">
-                            <span class="flaticon-accounting-1"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="heading">Accounting</h3>
-                            <p class="text-justify">
-                                Focuses on preparing financial statements such as income statements, balance sheets, and
-                                cash flow statements. These are used by external parties (e.g., investors, creditors) to
-                                assess an organization's financial health.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
-                    <div class="d-block">
-                        <div class="icon d-flex mr-2">
-                            <span class="flaticon-tax"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="heading">Tax, Compliance &amp; Payroll</h3>
-                            <p class="text-justify">
-                                Deals with preparing tax returns and ensuring compliance with tax laws and regulations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
-                    <div class="d-block">
-                        <div class="icon d-flex mr-2">
-                            <span class="flaticon-loan"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="heading">Financial Services</h3>
-                            <p class="text-justify">
-                                We offer a comprehensive suite of financial services tailored to meet the diverse needs
-                                of businesses and individuals. Our goal is to provide expert financial solutions that
-                                foster growth, streamline financial management, and mitigate risk.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
-                    <div class="d-block">
-                        <div class="icon d-flex mr-2">
-                            <span class="flaticon-budget"></span>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="heading">Import &amp; Export</h3>
-                            <p class="text-justify">We specialize in facilitating seamless international trade through our comprehensive export and import services. With a global network and expert knowledge of trade regulations, we help businesses expand their market reach and navigate the complexities of cross-border trade efficiently.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <section class="ftco-section ftco-no-pt bg-light ftco-faqs">
         <div class="container">
             <div class="row">

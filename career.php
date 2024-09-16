@@ -79,7 +79,7 @@
                            </div>
                         </div>
                         <div class="col-lg-4 col-md-5 d-flex">
-							<img src="images/job.webp" />
+							             <img src="images/job.webp" />
                         </div>
                      </div>
                   </div>
@@ -107,9 +107,8 @@
       </section>
       <?php include "includes/footer.php";?>  
       <script type="text/javascript">
-
          function postApi() {
-            console.log("Hello");
+           
          }
          function getData() {
              return {
@@ -134,7 +133,7 @@
                      return re.test(email);
                  },
                  validateField(){
-                  console.log("Chandan");
+                  
                  }
              }
          }

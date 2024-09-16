@@ -40,38 +40,14 @@
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="label" for="name" x-text="fullNameLabel"></label>
-															<input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="name" id="fullname" placeholder="Name" >
-															<span class="error_fullname"></span>
+															<input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="name" id="fullname" placeholder="Name" x-model="formData.fullName" >
+															<span class="error_fullname" x-text="formData.fullName"></span>
 														</div>
 													</div>
 													<div class="col-md-6"> 
 														<div class="form-group">
 															<label class="label" for="email" x-text="emailLabel"></label>
-															<input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="email" id="email" placeholder="Email">
-															<li x-show="formData.email.length > 0" class="flex items-center py-1">
-            <div 
-              :class="{'bg-green-200 text-green-700': isEmail(formData.email),
-               'bg-red-200 text-red-700': !isEmail(formData.email)}"
-                class=" rounded-full p-1 fill-current ">
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" 
-                  stroke="currentColor">
-                    <path
-                        x-show="isEmail(formData.email)"
-                        stroke-linecap="round" stroke-linejoin="round" 
-                        stroke-width="2" d="M5 13l4 4L19 7" />
-                    <path
-                        x-show="!isEmail(formData.email)"
-                        stroke-linecap="round" stroke-linejoin="round" 
-                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </div>
-            <span
-                :class="{'text-green-700': isEmail(formData.email), 
-                  'text-red-700': !isEmail(formData.email)}"
-                class="font-medium text-sm ml-3"
-                x-text="isEmail(formData.email) ? 
-                'Email is valid' : 'Email is not valid!' "></span>
-        </li>
+															<input type="email" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="email" id="email" placeholder="Email">
 														</div>
 													</div>
 													<div class="col-md-12">

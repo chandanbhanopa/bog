@@ -9,7 +9,7 @@
 	</div>
 	<?php include "includes/nav.php";?>
     <!-- END nav -->
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" >
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end">
@@ -31,7 +31,7 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Accounting</h3>
-                <p class="text-justify">Focuses on preparing financial statements such as income statements, balance sheets, and cash flow statements. These are used by external parties (e.g., investors, creditors) to assess an organization's financial health.</p>
+                <p>Focuses on preparing financial statements such as income statements, balance sheets, and cash flow statements. These are used by external parties (e.g., investors, creditors) to assess an organization's financial health.</p>
               </div>
             </div>      
           </div>
@@ -42,7 +42,7 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Tax, Compliance &amp; Payroll</h3>
-                <p class="text-justify"> Deals with preparing tax returns and ensuring compliance with tax laws and regulations.</p>
+                <p> Deals with preparing tax returns and ensuring compliance with tax laws and regulations.</p>
               </div>
             </div>    
           </div>
@@ -53,7 +53,7 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Financial Services</h3>
-                <p class="text-justify">We offer a comprehensive suite of financial services tailored to meet the diverse needs of businesses and individuals. Our goal is to provide expert financial solutions that foster growth, streamline financial management, and mitigate risk.
+                <p>we offer a comprehensive suite of financial services tailored to meet the diverse needs of businesses and individuals. Our goal is to provide expert financial solutions that foster growth, streamline financial management, and mitigate risk.
                 </p>
               </div>
             </div>      
@@ -65,7 +65,7 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Import &amp; Export</h3>
-                <p class="text-justify">We specialize in facilitating seamless international trade through our comprehensive export and import services. With a global network and expert knowledge of trade regulations, we help businesses expand their market reach and navigate the complexities of cross-border trade efficiently.</p>
+                <p>We specialize in facilitating seamless international trade through our comprehensive export and import services. With a global network and expert knowledge of trade regulations, we help businesses expand their market reach and navigate the complexities of cross-border trade efficiently.</p>
               </div>
             </div>      
           </div>
@@ -89,7 +89,7 @@
     					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wealth"></span></div>
     					<div class="text pl-4">
     						<h4>Market Analysis</h4>
-    						<p class="text-justify">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+    						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
     					</div>
     				</div>
     				<div class="services-2 w-100 d-flex">
