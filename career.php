@@ -8,6 +8,7 @@ use PHPMailer\PHPMailer\SMTP;
 $message = "";
 if( isset($_POST) && isset($_POST['apply_for_job'])) {
 
+
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
@@ -27,7 +28,7 @@ try {
 
     //Recipients
     $mail->setFrom('info@bogtrading.com', 'Job Application');
-    $mail->addAddress('admin@bogtrading.com', $_POST['name']);     //Add a recipient
+    $mail->addAddress('chandanbhanopa@gmail.com', $_POST['name']);     //Add a recipient
     $mail->addReplyTo('info@bogtrading.com', 'Information');
 
     //Attachments

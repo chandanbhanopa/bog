@@ -9,7 +9,7 @@
 	</div>
 	<?php include "includes/nav.php";?>
     <!-- END nav -->
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" >
+    <!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" >
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end">
@@ -19,7 +19,65 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+    <div class="hero-wrap">
+        <div class="home-slider owl-carousel">
+            <div class="slider-item" style="background-image: url(images/accounting.jpg)">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-center justify-content-center">
+                        <div class="col-md-8 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-4">Accounting</h1>
+                                <p><a href="contact.php" class="btn btn-white">Connect with us</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item" style="background-image: url(images/tax.jpg)">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-center justify-content-center">
+                        <div class="col-md-8 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-4">Tax, Compliance & Payroll</h1>
+                                <p><a href="#" class="btn btn-white">Connect with us</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-item" style="background-image: url(images/finance-services.jpg)">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-center justify-content-center">
+                        <div class="col-md-8 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-4">Financial Services</h1>
+                                <p><a href="#" class="btn btn-white">Connect with us</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item" style="background-image: url(images/export_import.jpg)">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-center justify-content-center">
+                        <div class="col-md-8 ftco-animate">
+                            <div class="text w-100 text-center">
+                                <h1 class="mb-4">Import & Export</h1>
+                                <p><a href="#" class="btn btn-white">Connect with us</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="ftco-section">
     	<div class="container">
@@ -30,8 +88,8 @@
             		<span class="flaticon-accounting-1"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Accounting</h3>
-                <p>Focuses on preparing financial statements such as income statements, balance sheets, and cash flow statements. These are used by external parties (e.g., investors, creditors) to assess an organization's financial health.</p>
+                <h3 class="heading pb-8">Accounting</h3>
+                <p class="text-justify">Focuses on preparing financial statements such as income statements, balance sheets, and cash flow statements. These are used by external parties (e.g., investors, creditors) to assess an organization's financial health.</p>
               </div>
             </div>      
           </div>
@@ -41,8 +99,8 @@
             		<span class="flaticon-tax"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Tax, Compliance &amp; Payroll</h3>
-                <p> Deals with preparing tax returns and ensuring compliance with tax laws and regulations.</p>
+                <h3 class="heading pb-1">Tax, Compliance &amp; Payroll</h3>
+                <p class="text-justify"> Deals with preparing tax returns and ensuring compliance with tax laws and regulations.</p>
               </div>
             </div>    
           </div>
@@ -52,8 +110,8 @@
             		<span class="flaticon-loan"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Financial Services</h3>
-                <p>we offer a comprehensive suite of financial services tailored to meet the diverse needs of businesses and individuals. Our goal is to provide expert financial solutions that foster growth, streamline financial management, and mitigate risk.
+                <h3 class="heading pb-8">Financial Services</h3>
+                <p class="text-justify ">we offer a comprehensive suite of financial services tailored to meet the diverse needs of businesses and individuals. Our goal is to provide expert financial solutions that foster growth, streamline financial management, and mitigate risk.
                 </p>
               </div>
             </div>      
@@ -64,8 +122,8 @@
             		<span class="flaticon-budget"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Import &amp; Export</h3>
-                <p>We specialize in facilitating seamless international trade through our comprehensive export and import services. With a global network and expert knowledge of trade regulations, we help businesses expand their market reach and navigate the complexities of cross-border trade efficiently.</p>
+                <h3 class="heading pb-8">Import &amp; Export</h3>
+                <p class="text-justify">We specialize in facilitating seamless international trade through our comprehensive export and import services. With a global network and expert knowledge of trade regulations, we help businesses expand their market reach and navigate the complexities of cross-border trade efficiently.</p>
               </div>
             </div>      
           </div>

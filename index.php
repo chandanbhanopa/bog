@@ -70,57 +70,14 @@
                 <div class="col-md-6 pl-md-5 py-md-5">
                     <div class="heading-section pl-md-4 pt-md-5">
                     <h2 class="mb-4">About Us</h2>
-                        <span class="subheading">Welcome to BOG</span>
                         <h2 class="mb-4">We Are the Best Accounting Agency</h2>
                     </div>
                     <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-wealth"></span>
-                        </div>
                         <div class="text pl-4">
-                            <h4>Market Analysis</h4>
                             <p class="text-justify">
-                                Unlock actionable insights with our comprehensive market analysis, helping your business
-                                identify trends, understand competitors, and make data-driven decisions for sustained
-                                growth.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-accountant"></span>
-                        </div>
-                        <div class="text pl-4">
-                            <h4>Accounting Advisor</h4>
-                            <p class="text-justify">
-                                Our Accounting Advisor services provide expert financial guidance to help businesses
-                                optimize their accounting practices, ensure regulatory compliance, and improve financial
-                                decision-making.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-teamwork"></span>
-                        </div>
-                        <div class="text pl-4">
-                            <h4>General Consultancy</h4>
-                            <p class="text-justify">
-                                Our General Consultancy services are designed to provide businesses with expert advice
-                                across a range of industries and operations.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="services-2 w-100 d-flex">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-accounting"></span>
-                        </div>
-                        <div class="text pl-4">
-                            <h4>Structured Assestment</h4>
-                            <p class="text-justify">
-                                Our Structured Assessment service offers a systematic evaluation of your business
-                                processes, providing clear insights and actionable strategies to enhance performance and
-                                drive success.
+                                At BOG Trading, we are committed to providing comprehensive solutions in accounting, finance, payroll management, and import-export services. Established with a focus on precision, reliability, and excellence, we cater to businesses of all sizes, helping them streamline financial processes and navigate the complexities of international trade.
+                                Our team of dedicated professionals brings years of industry expertise to the table, ensuring that every client receives tailored, strategic advice. From managing payroll with accuracy to overseeing financial reporting and handling cross-border transactions, BOG Trading stands as a trusted partner in driving business growth and success.
+                                Whether you’re a small business seeking reliable accounting services or a global player looking to expand your trade operations, BOG Trading offers the support and expertise you need to thrive in a competitive market.
                             </p>
                         </div>
                     </div>
