@@ -2,76 +2,6 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
-$message = "";
-if( isset($_POST) && isset($_POST['apply_for_job'])) {
-
-
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-
-$mail = new PHPMailer(true);
-
-try {
-    //Server settings
-    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'devuser245';                     //SMTP username
-    $mail->Password   = 'okri uycg qjng ajbn';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-    //Recipients
-    $mail->setFrom('info@bogtrading.com', 'Job Application');
-    $mail->addAddress('chandanbhanopa@gmail.com', $_POST['name']);     //Add a recipient
-    $mail->addReplyTo('info@bogtrading.com', 'Information');
-
-    //Attachments
-    $mail->addAttachment($_FILES['resume']['tmp_name'], $_FILES['resume']['name']);         //Add attachments
-
-    //Content
-    $mail->isHTML(true);                                 //Set email format to HTML
-    $mail->Subject = 'Job Application';
-    
-    $htmlStr = "";
-    $htmlStr .= '<table style="border:solid 1px">
-      <tbody>
-        <tr style="border:solid 1px">
-          <td>Name</td>
-          <td>'.$_POST['name'].'</td>
-        </tr>
-        <tr style="border:solid 1px">
-          <td>Email</td>
-          <td>'.$_POST['email'].'</td>
-        </tr>
-        <tr style="border:solid 1px">
-          <td>Mobile Number</td>
-          <td>'.$_POST['mobile'].'</td>
-        </tr>
-        <tr style="border:solid 1px">
-          <td>Highest Quanlification</td>
-          <td>'.$_POST['quanification'].'</td>
-        </tr>
-      </tbody>
-    </table>';
-
-    $mail->Body    = $htmlStr;
-
-    $result = $mail->send();
-    if($result) {
-      $message = "Your application submitted successfuly. One of our team member will reach you with in 24 Hrs";
-    }
-    //echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +36,7 @@ try {
                               <h2>Job Application Form</h2>
                               <div id="form-message-warning" class="mb-4"></div>
                               <div class="form-message-success bg-lime-200" class="mb-4">
-                                 <span class="text-base font-medium"><?php if($message) echo $message;?></span>
+                                 <span class="text-base font-medium"></span>
                               </div>
                               <form method="POST" action="<?=$_SERVER['PHP_SELF']?>"  id="contactForm" name="contactForm" class="contactForm" enctype="multipart/form-data" >
                                  <div class="row">
@@ -133,6 +63,12 @@ try {
                                        <div class="form-group">
                                           <label class="label" for="quanification" x-text="qualificationLabel"></label>
                                           <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="quanification" id="quanification" placeholder="Quanification" required="" maxlength="10">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group">
+                                          <label class="label" for="designation" x-text="designationLabel"></label>
+                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="designation" id="designation" placeholder="Designation" required="" maxlength="10">
                                        </div>
                                     </div>
                                     <div class="col-md-12">
@@ -203,6 +139,7 @@ try {
                  mobileLabel:"Mobile Number",
                  resumeLabel :"Upload Your Resume",
                  qualificationLabel : "Highest Quanification",
+                 designationLabel:'Apply for the post',
                  isEmail(email){
                      var re = /\S+@\S+\.\+S/;
                      return re.test(email);
