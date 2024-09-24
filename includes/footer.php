@@ -6,21 +6,22 @@
                         Sign Up for Your Free 1st Accounting Consultation
                     </h2>
                 </div>
-                <div class="col-md-5 d-flex align-items-center">
-                    <form action="#" class="subscribe-form">
+                <div class="col-md-5 d-flex align-items-center" x-data="subscriptionForm()">
+                    <form action="#" class="subscribe-form"  @submit.prevent="submitData">
                         <div class="form-group d-flex">
-                            <input type="text" class="form-control" placeholder="Enter email address" />
-                            <input type="submit" value="Subscribe" class="submit px-3" />
+                            <input type="text" class="form-control" x-model="formData.email" placeholder="Enter email address" />
+                            <input type="submit" value="Subscribe" class="submit px-3" x-text="buttonLabel" x-model="buttonLabel"/>
                         </div>
+                        <span x-bind:class="isError ? 'text-red-600 font-bold' : 'text-green-600 font-bold' " x-text="message" x-model="isError" ></span>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
+</section>
 <footer class="footer">
     <div class="container-fluid px-lg-5">
         <div class="row">
-            <div class="col-md-9 py-5">
+            <div class="col-md-12 py-5">
                 <div class="row">
                     <div class="col-md-4 mb-md-0 mb-4">
                         <h2 class="footer-heading">About us</h2>
@@ -95,11 +96,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
+           <!--  <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5" x-data="enquiryForm()">
                 <h2 class="footer-heading">Free consultation</h2>
-                <form action="#" class="form-consultation">
+               
+                <form action="#" class="form-consultation" @submit.prevent="sendEnquiry" >
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name" />
+                        <input type="text" x-bind:class="isNameEmpty ? 'border-red-600' : 'border-green-600' " class="form-control" placeholder="Your Name" />
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Your Email" />
@@ -112,12 +114,11 @@
                             placeholder="Message"></textarea>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="form-control submit px-3">
-                            Send A Message
+                        <button type="submit" class="form-control submit px-3" x-text="enquiryBtnLabel" x-model="enquiryBtnLabel">
                         </button>
                     </div>
                 </form>
-            </div>
+            </div> -->
         </div>
     </div>
 </footer>
@@ -144,3 +145,54 @@
 <script src="js/scrollax.min.js"></script>
 <script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+
+<script type="text/javascript">
+    let csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    function subscriptionForm() {
+        return {
+            formData: {
+                email:""
+            },
+            message:"",
+            buttonLabel:"Subscribe",
+            isError : true,
+            submitData() {
+                this.buttonLabel = "Sending...";
+                if(this.formData.email == ""){
+                    this.isError = true;
+                    this.buttonLabel = "Subscribe";
+                    this.message = "Enter your email address";
+                    return;
+                } else {
+                    this.formData.type = "subscription",
+                    this.formData.csrf_token = csrfToken,
+                    this.message = '';
+                    fetch('/Api/index.php',{
+                        method:'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body:JSON.stringify(this.formData)
+                    })
+                    .then((res)=> {
+                        return res.json();
+                    })
+                    .then((res)=> {
+                        this.message = res.message;
+                        this.buttonLabel = "Subscribe";
+                        this.isError = !res.status;
+                        return;
+                    })
+                    .catch((error)=>{
+                        console.log(error);
+                        this.isError = true;
+                        this.buttonLabel = "Subscribe";
+                        this.message="Something went wrong. Please try again";
+
+                    })
+                }
+                
+            }
+        }
+    }
+</script>

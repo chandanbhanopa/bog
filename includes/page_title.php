@@ -1,3 +1,6 @@
+<?php include "config.php";
+$csrf_token = $_SESSION['csrf_token'];
+?>
 <title><?php echo "BOG Trading"; ?></title>
 <link rel="icon" type="image/x-icon" href="images/logo.ico">
 <meta charset="utf-8" />
@@ -12,3 +15,4 @@
 <link rel="stylesheet" href="css/flaticon.css" />
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
+<meta name="csrf-token" content="<?= $csrf_token ?>">

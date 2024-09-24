@@ -99,7 +99,12 @@
 							        			<span class="fa fa-phone"></span>
 							        		</div>
 							        		<div class="text pl-3">
-								            <p><span>Phone:</span> <a href="tel://1234567920">(+91)97526-29888</a></p>
+								            <p><span>Phone:</span> 
+								            	<br/>
+								            	<a href="tel://9752629888">(+91)97526-29888</a>
+								            	<a href="tel://9301030931">(+91)93010-30931</a>
+
+								            </p>
 								          </div>
 							           </div>
 						        		<div class="dbox w-100 d-flex align-items-center">
@@ -107,7 +112,11 @@
 							        			<span class="fa fa-paper-plane"></span>
 							        		</div>
 							        		<div class="text pl-3">
-								            	<p><span>Email:</span> <a href="mailto:info@yoursite.com">admin@bogtrading.com</a></p>
+								            	<p><span>Email:</span>
+								            	<a href="mailto:info@yoursite.com">admin@bogtrading.com</a>
+								            	<br/>
+								            	<a href="mailto:info@yoursite.com">accounts@bogtrading.com</a>
+								            </p>
 								          	</div>
 						          		</div>
 							        	<div class="dbox w-100 d-flex align-items-center">
