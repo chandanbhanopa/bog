@@ -6,7 +6,7 @@ $url = str_replace("/","",$url);
     <div class="container">
         
         <a class="navbar-brand flex w-1/2"  href="index.php">
-            <img src="images/logo.jpg" width="15%" />
+            <img src="images/logo.jpg" width="25%" />
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"

@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +81,6 @@ ini_set("display_errors", 1);
                                     <div class="col-md-12">
                                        <div class="form-group">
                                           <button type="submit" id="submit" name="apply_for_job" value="apply" class="btn btn-primary" x-text="buttonLabel">
-                                             <div class="submitting"></div>
                                           </button>
 
                                        </div>
@@ -101,9 +101,6 @@ ini_set("display_errors", 1);
       <!-- <div id="map" class="map"></div> -->
       <?php include "includes/footer.php";?>  
       <script type="text/javascript">
-         function postApi() {
-           
-         }
          function getData() {
              return {
                  formData : {
