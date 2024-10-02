@@ -6,7 +6,7 @@ if(!isset($_SESSION['user_data'])){
     exit(); 
 }
 
-$result = getAllContacts($conn);
+$result = getAllSubscribers($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@ $result = getAllContacts($conn);
 
                         </span>
                         </a>
-                        <span>Total Contacts</span>
+                        <span>Emails Subscriptions</span>
                     </div>
                 </nav>
                 <!-- /Nav -->
@@ -48,25 +48,7 @@ $result = getAllContacts($conn);
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         <div class="flex items-center">
-                                            Full Name
-                                        </div>
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        <div class="flex items-center">
-                                            Email
-                                        </div>
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        <div class="flex items-center">
-                                            Mobile
-                                        </div>
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        <span class="sr-only">Subject</span>
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        <div class="flex items-center">
-                                            Message
+                                           Email
                                         </div>
                                     </th>
                                     <th scope="col" class="px-6 py-3">
@@ -85,20 +67,8 @@ $result = getAllContacts($conn);
                                         <?php echo $row['id'];?>
                                     </th>
                                     <td class="px-6 py-4">
-                                        <?php echo $row['full_name'];?>
-                                    </td>
-                                    <td class="px-6 py-4">
                                         <?php echo $row['email'];?>
                                     </td>
-                                    <td class="px-6 py-4">
-                                        <?php echo $row['contact_number'];?>
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <?php echo $row['subject'];?>
-                                    </td>
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <?php echo $row['message'];?>
-                                    </th>
                                     <td class="px-6 py-4">
                                          <?php echo $row['created_at'];?>
                                     </td>

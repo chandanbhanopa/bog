@@ -1,5 +1,20 @@
 <?php
 include "../includes/config.php";
+include "../includes/functions.php";
+
+if(!isset($_SESSION['user_data'])){
+    header("Location: index.php"); 
+    exit(); 
+}
+#job_application
+$totalJobApplication = getTotal($conn, "job_application") ;
+
+#contacts
+$totalContacts = getTotal($conn, "contacts") ;
+
+#email_subscription
+$totalSubscription = getTotal($conn, "email_subscription") ;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,13 +24,13 @@ include "../includes/config.php";
 </head>
 
 <body class="font-montserrat ">
-    <div class="flex min-h-screen 2xl:max-w-7xl 2xl:mx-auto 2xl:border-x-2 2xl:border-indigo-50 ">
+    <div class="flex min-h-screen 2xl:border-x-2 2xl:border-indigo-50 ">
         <?php include "sidebar.php";?>
             <!-- Sidebar -->
             <main class="bg-indigo-50/60 w-full py-10 px-3 sm:px-10">
                 <!-- Nav -->
                 <nav class="text-lg flex items-center justify-between content-center ">
-                    <div class=" font-semibold text-xl text-gray-800 flex space-x-4 items-center">
+                    <div class=" text-xl text-gray-800 flex space-x-4 items-center">
                         <a href="#">
                             <span class="md:hidden">
                             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,33 +76,34 @@ include "../includes/config.php";
                                         Total Job Application
                                     </th>
                                     <td class="px-6 py-4">
-                                        50
+                                        <?php echo $totalJobApplication;?>
                                     </td>
                                     
                                     <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
+                                        <a href="job_application.php" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
                                     </td>
                                 </tr>
                                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Total Enquiry
+                                        Total Contacts
                                     </th>
                                     <td class="px-6 py-4">
-                                        200
+                                        <?php echo $totalContacts ?>
+
                                     </td>
                                     <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
+                                        <a href="contact.php" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
                                     </td>
                                 </tr>
                                 <tr class="bg-white dark:bg-gray-800">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Total Contacts
+                                        Total Email Subscription
                                     </th>
                                     <td class="px-6 py-4">
-                                        300
+                                        <?php echo $totalSubscription ?>
                                     </td>
                                     <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
+                                        <a href="subscribers.php" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
                                     </td>
                                 </tr>
                             </tbody>

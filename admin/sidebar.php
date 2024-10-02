@@ -13,12 +13,12 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
                         <span>Job Applications</span>
                     </svg></a>
-                <a class=" flex items-center space-x-2 py-1  font-semibold  border-r-2 border-r-indigo-700 pr-20 " href="enquiry.php">
+                <a class=" flex items-center space-x-2 py-1  font-semibold  border-r-2 border-r-indigo-700 pr-20 " href="subscribers.php">
                     <svg class="h-5 w-5 stroke-indigo-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         
                     </svg>
-                    <span>Enquiry</span>
+                    <span>Email Subscribers</span>
                 </a>
                 <a class=" flex items-center space-x-2 py-1  group hover:border-r-2 hover:border-r-indigo-700 hover:font-semibold " href="contact.php">
                     <svg class="h-5 w-5 group-hover:stroke-indigo-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -181,6 +181,7 @@
                         this.message = res.message;
                         this.buttonLabel = "Subscribe";
                         this.isError = !res.status;
+                        this.formData.email = "";
                         return;
                     })
                     .catch((error)=>{

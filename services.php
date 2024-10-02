@@ -9,7 +9,7 @@
 	</div>
 	<?php include "includes/nav.php";?>
     <div class="hero-wrap">
-        <div class="services-slider owl-carousel">
+        <div class="home-slider owl-carousel">
             <div class="slider-item" style="background-image: url(images/accounting.jpg)">
                 <div class="overlay"></div>
                 <div class="container">

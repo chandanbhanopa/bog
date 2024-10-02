@@ -1,5 +1,12 @@
 <?php
 include "../includes/config.php";
+include "../includes/functions.php";
+if(!isset($_SESSION['user_data'])){
+    header("Location: index.php"); 
+    exit(); 
+}
+
+$result = getAllJobs($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,13 +16,13 @@ include "../includes/config.php";
 </head>
 
 <body class="font-montserrat ">
-    <div class="flex min-h-screen 2xl:max-w-7xl 2xl:mx-auto 2xl:border-x-2 2xl:border-indigo-50 ">
+    <div class="flex min-h-screen 2xl:border-x-2 2xl:border-indigo-50 ">
         <?php include "sidebar.php";?>
             <!-- Sidebar -->
             <main class="bg-indigo-50/60 w-full py-10 px-3 sm:px-10">
                 <!-- Nav -->
                 <nav class="text-lg flex items-center justify-between content-center ">
-                    <div class=" font-semibold text-xl text-gray-800 flex space-x-4 items-center">
+                    <div class="text-xl text-gray-800 flex space-x-4 items-center">
                         <a href="#">
                             <span class="md:hidden">
                             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -24,7 +31,7 @@ include "../includes/config.php";
 
                         </span>
                         </a>
-                        <span>Total Job Application</span>
+                        <span>Job Application Recieved</span>
                     </div>
                 </nav>
                 <!-- /Nav -->
@@ -37,98 +44,85 @@ include "../includes/config.php";
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
-                                        Type
+                                        Id
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         <div class="flex items-center">
-                                            Total
-                                            <a href="#">
-                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-                                                    />
-                                                </svg>
-                                            </a>
+                                            Full Name
                                         </div>
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         <div class="flex items-center">
-                                            Category
-                                            <a href="#">
-                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-                                                    />
-                                                </svg>
-                                            </a>
+                                            Email
                                         </div>
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         <div class="flex items-center">
-                                            Price
-                                            <a href="#">
-                                                <svg class="w-3 h-3 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-                                                    />
-                                                </svg>
-                                            </a>
+                                            Mobile
                                         </div>
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        <span class="sr-only">Edit</span>
+                                        <span class="sr-only">Qualification</span>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            Applied Post
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            Resume
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            Date
+                                        </div>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <?php 
+                                    if ($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()) { ?>
+                                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Apple MacBook Pro 17"
+                                        <?php echo $row['id'];?>
                                     </th>
                                     <td class="px-6 py-4">
-                                        Silver
+                                        <?php echo $row['full_name'];?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        Laptop
+                                        <?php echo $row['email'];?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        $2999
+                                        <?php echo $row['mobile'];?>
                                     </td>
                                     <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                        <?php echo $row['qualification'];?>
                                     </td>
-                                </tr>
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Microsoft Surface Pro
+                                        <?php echo $row['applied_post'];?>
                                     </th>
                                     <td class="px-6 py-4">
-                                        White
+                                         <?php
+                                    $file = $row['file_name']; //Let say If I put the file name Bang.png
+                                   
+                                    echo "<a href=".BASE_URL."uploads/".urldecode($file)." target='_blank'>Download Resume</a> ";
+                                    ?>
                                     </td>
                                     <td class="px-6 py-4">
-                                        Laptop PC
+                                         <?php echo $row['created_at'];?>
                                     </td>
-                                    <td class="px-6 py-4">
-                                        $1999
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                    </td>
+                                    
                                 </tr>
-                                <tr class="bg-white dark:bg-gray-800">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Magic Mouse 2
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        Black
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        Accessories
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        $99
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                    </td>
-                                </tr>
+                                         <?php } 
+                                    } else {
+                                        echo "0 results";
+                                    }
+                                ?>
+                                    
+                                
                             </tbody>
                         </table>
                     </div>

@@ -14,7 +14,7 @@
   <?php include "includes/nav.php";?>
   <!-- END nav -->
   <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');"
-    data-stellar-background-ratio="0.5">
+    >
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text align-items-end">
@@ -40,7 +40,7 @@
                 <div><a href="#">Admin</a></div>
                 <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
               </div>
-              <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a>
+              <h3 class="heading"><a href="#">Stay ahead of tax season with expert guidance - maximize your refunds and minimize your stress</a>
               </h3>
             </div>
           </div>
@@ -55,7 +55,7 @@
                 <div><a href="#">Admin</a></div>
                 <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
               </div>
-              <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a>
+              <h3 class="heading"><a href="#">Accurate accounting is crucial for business success. By implementing effective accounting practices, businesses can make informed decisions, drive growth, and ensure compliance. Don't let poor accounting hold you back – invest in accurate accounting today.</a>
               </h3>
             </div>
           </div>
@@ -70,7 +70,7 @@
                 <div><a href="#">Admin</a></div>
                 <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
               </div>
-              <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a>
+              <h3 class="heading"><a href="#">Effective payroll management is crucial for business success. By implementing best practices, leveraging technology, and avoiding common mistakes, businesses can streamline efficiency, ensure compliance, and improve employee satisfaction.</a>
               </h3>
             </div>
           </div>
@@ -86,7 +86,7 @@
                 <div><a href="#">Admin</a></div>
                 <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
               </div>
-              <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a>
+              <h3 class="heading"><a href="#">Export-import trade is a vital aspect of global commerce, offering immense growth opportunities.</a>
               </h3>
             </div>
           </div>
@@ -101,7 +101,7 @@
                 <div><a href="#">Admin</a></div>
                 <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
               </div>
-              <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a>
+              <h3 class="heading"><a href="#">Discover the ultimate guide to payroll management. Learn how to streamline efficiency, ensure compliance, and improve employee satisfaction with expert tips and technology solutions.</a>
               </h3>
             </div>
           </div>
@@ -116,7 +116,7 @@
                 <div><a href="#">Admin</a></div>
                 <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
               </div>
-              <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a>
+              <h3 class="heading"><a href="#">Discover the importance of accurate accounting for business success. Learn how effective accounting practices can drive growth, ensure compliance, and improve financial transparency.</a>
               </h3>
             </div>
           </div>

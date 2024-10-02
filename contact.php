@@ -1,3 +1,37 @@
+<?php 
+error_reporting(E_ALL);
+ini_set('dislpay_errors', 1);
+$status = "";
+$message = "";
+require 'includes/config.php';
+$table = "contacts";
+
+if(isset($_POST)) {
+  if(isset($_POST['send_message'])) {
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $contact_number = $_POST['contact_number'];
+      $subject = $_POST['subject'];
+      $message = $_POST['message'];
+      $error = false;
+      if($name == "" || $email == "" || $contact_number == "" || $subject == "" || $message == "") {
+        $error = true;
+        $message = "<div class='alert alert-danger'>Please fill all information.</div>";
+      }
+
+       if(!$error) {
+          $sql = "INSERT INTO $table (full_name, email, contact_number, subject, message)
+                VALUES ('$name', '$email', '$contact_number', '$subject', '$message')";
+            if ($conn->query($sql) === TRUE) {
+                $message = "<div class='alert alert-success'>Your request submitted successfully. Our team will reach you shortly</div>";
+            } else {
+                $message = "<div class='alert alert-danger'>Please try again. Something went wrong.</div>";
+            }
+        }
+  	}
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,35 +65,38 @@
 									<div class="contact-wrap w-100 p-md-5 p-4" x-data="getData()">
 										<h3 class="mb-4">Get in touch</h3>
 										<div id="form-message-warning" class="mb-4"></div> 
-											<div class="form-message-success" class="mb-4">
-											Your message was sent, thank you!
-											</div>
+											 <?php if($message) { echo $message ; } ?>
 											<form method="POST" action="<?=$_SERVER['PHP_SELF']?>" id="contactForm" name="contactForm" class="contactForm">
 												<input type="hidden" name="request_type" value="contact" />
 												<div class="row">
 													<div class="col-md-6">
 														<div class="form-group">
 															<label class="label" for="name" x-text="fullNameLabel"></label>
-															<input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="name" id="fullname" placeholder="Name" x-model="formData.fullName" >
-															<span class="error_fullname" x-text="formData.fullName"></span>
+															<input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="name" id="fullname" placeholder="Name" required="" >
 														</div>
 													</div>
 													<div class="col-md-6"> 
 														<div class="form-group">
 															<label class="label" for="email" x-text="emailLabel"></label>
-															<input type="email" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="email" id="email" placeholder="Email">
+															<input type="email" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="email" id="email" placeholder="Email" required="">
 														</div>
 													</div>
-													<div class="col-md-12">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="label" for="contact_number" x-text="mobileLabel"></label>
+															<input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="contact_number" id="contact_number" placeholder="Contact Number" required="">
+														</div>
+													</div>
+													<div class="col-md-6">
 														<div class="form-group">
 															<label class="label" for="subject" x-text="subjectLabel"></label>
-															<input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="subject" id="subject" placeholder="Subject">
+															<input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="subject" id="subject" placeholder="Subject" required="">
 														</div>
 													</div>
 													<div class="col-md-12">
 														<div class="form-group">
 															<label class="label" for="#" x-text="messageLabel"></label>
-															<textarea name="message" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+															<textarea name="message" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" id="message" cols="30" rows="4" placeholder="Message" required=""></textarea>
 														</div>
 													</div>
 													<div class="col-md-12">
@@ -137,7 +174,6 @@
 				</div>
     	</div>
     </section>
-
    	<!-- <div id="map" class="map"></div> -->
   	<?php include "includes/footer.php";?>  
 	<script type="text/javascript">
@@ -147,7 +183,8 @@
 					fullName:"",
 					email:"",
 					subject:"",
-					message:""
+					message:"",
+
 				},
 				status: false,
 				loading:false,
@@ -157,6 +194,7 @@
 				emailLabel:"Email Address",
 				subjectLabel:"Your Subject",
 				messageLabel:"Your Message",
+				mobileLabel:"Mobile Number",
 				isEmail(email){
 					var re = /\S+@\S+\.\+S/;
 					return re.test(email);

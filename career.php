@@ -1,7 +1,53 @@
 <?php 
 error_reporting(E_ALL);
-ini_set("display_errors", 1);
+ini_set('dislpay_errors', 1);
+$status = "";
+$message = "";
+require 'includes/config.php';
+require 'includes/functions.php';
+$table = "job_application";
 
+if(isset($_POST)) {
+  if(isset($_POST['apply_for_job'])) {
+      $uploads_dir = __DIR__.'/uploads';
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $mobile = $_POST['mobile'];
+      $quanification = $_POST['quanification'];
+      $designation = $_POST['designation'];
+      $error = false;
+      if($name == "" || $email == "" || $mobile == "" || $quanification == "" || $designation == "") {
+        $error = true;
+        $message = "<div class='alert alert-danger'>Please fill all information.</div>";
+      }
+
+      $isEmailDuplicate = checkDuplicateEmail($table, $email, $conn);
+      if($isEmailDuplicate) {
+        $error = true;
+        $message = "<div class='alert alert-danger'>This email already in use. Please use other email</div>";
+      }
+
+  }
+  if (isset($_FILES['resume'])) {
+    if (!$_FILES['resume']['error']) {
+        $fileName = $_FILES['resume']['name'];
+        $tmp_name = $_FILES["resume"]["tmp_name"];
+        $fileName = basename($_FILES["resume"]["name"]);
+        $fileName  = str_replace(' ', '_', $fileName);
+        
+        $result = move_uploaded_file($tmp_name, "$uploads_dir/$fileName");
+        if($result && !$error) {
+          $sql = "INSERT INTO $table (full_name, email, mobile, qualification, applied_post, file_name)
+                VALUES ('$name', '$email', '$mobile', '$quanification', '$designation', '$fileName')";
+            if ($conn->query($sql) === TRUE) {
+                $message = "<div class='alert alert-success'>Your request submitted successfully. Our team will reach you shortly</div>";
+            } else {
+                $message = "<div class='alert alert-danger'>Please try again. Something went wrong.</div>";
+            }
+        }
+    }
+  }
+}
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +81,7 @@ ini_set("display_errors", 1);
                         <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch" >
                            <div class="contact-wrap w-100 p-md-5 p-4" x-data="getData()">
                               <h2>Job Application Form</h2>
-                              <div id="form-message-warning" class="mb-4"></div>
+                                <?php if($message) { echo $message ; } ?>
                               <div class="form-message-success bg-lime-200" class="mb-4">
                                  <span class="text-base font-medium"></span>
                               </div>
@@ -57,19 +103,19 @@ ini_set("display_errors", 1);
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <label class="label" for="mobile" x-text="mobileLabel"></label>
-                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="mobile" id="mobile" placeholder="mobile number" required="" pattern="\d*">
+                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="mobile" id="mobile" placeholder="mobile number" required="" pattern="\d*" maxlength="10">
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <label class="label" for="quanification" x-text="qualificationLabel"></label>
-                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="quanification" id="quanification" placeholder="Quanification" required="" maxlength="10">
+                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="quanification" id="quanification" placeholder="Quanification" required="" >
                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                        <div class="form-group">
                                           <label class="label" for="designation" x-text="designationLabel"></label>
-                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="designation" id="designation" placeholder="Designation" required="" maxlength="10">
+                                          <input type="text" class="form-control focus:bg-white focus:border-gray-600 focus:outline-none" name="designation" id="designation" placeholder="Designation" required="">
                                        </div>
                                     </div>
                                     <div class="col-md-12">
