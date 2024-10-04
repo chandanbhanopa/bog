@@ -37,6 +37,19 @@ if($data['type'] == 'subscription') {
   createSubscription($data, $conn);
 }
 
+if($data['type'] == 'deleteContact') {
+  deleteContact($data, $conn);
+}
+
+if($data['type'] == 'deleteJobApplication') {
+  deleteJobApplication($data, $conn);
+}
+if($data['type'] == 'deleteSubscription') {
+  deleteSubscription($data, $conn);
+}
+
+
+
 function createSubscription($data, $conn) {
   $table = "email_subscription";
   $email = filter_var($data['email'], FILTER_VALIDATE_EMAIL);
@@ -80,12 +93,45 @@ function checkDuplicateEmail($table, $email, $conn) {
   }
 }
 
-function saveEnquiry() {
 
+function deleteContact($data, $conn) {
+    $id = $data['contact_id'];
+    $sql = "DELETE FROM contacts WHERE id = $id";
+    if ($conn->query($sql) === TRUE) {
+        echo json_encode(['status' => true, 'message' => 'Removed']); 
+    } else {
+        echo json_encode(['status' => false, 'message' => 'Please try again']); 
+    }
+    exit;
+}
+
+function deleteJobApplication($data, $conn) {
+    $id = $data['application_id'];
+    $sql = "DELETE FROM job_application WHERE id = $id";
+    if ($conn->query($sql) === TRUE) {
+        echo json_encode(['status' => true, 'message' => 'Removed']); 
+    } else {
+        echo json_encode(['status' => false, 'message' => 'Please try again']); 
+    }
+    exit;
 }
 
 
+function deleteSubscription($data, $conn) {
+    $id = $data['subscription_id'];
+    $sql = "DELETE FROM email_subscription WHERE id = $id";
+    if ($conn->query($sql) === TRUE) {
+        echo json_encode(['status' => true, 'message' => 'Removed']); 
+    } else {
+        echo json_encode(['status' => false, 'message' => 'Please try again']); 
+    }
+    exit;
+}
 
+
+// job_application
+// contacts
+// email_subscription
 
 
 

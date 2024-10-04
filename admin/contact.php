@@ -5,7 +5,6 @@ if(!isset($_SESSION['user_data'])){
     header("Location: index.php"); 
     exit(); 
 }
-
 $result = getAllContacts($conn);
 ?>
 <!DOCTYPE html>
@@ -39,7 +38,7 @@ $result = getAllContacts($conn);
                 <!-- Filters Section -->
                 <section>
                     <!-- Invoice List Table -->
-                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg" x-data="contactComponent()">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
@@ -74,6 +73,11 @@ $result = getAllContacts($conn);
                                             Date
                                         </div>
                                     </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        <div class="flex items-center">
+                                            Action
+                                        </div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -102,9 +106,13 @@ $result = getAllContacts($conn);
                                     <td class="px-6 py-4">
                                          <?php echo $row['created_at'];?>
                                     </td>
+                                    <td class="px-6 py-4">
+                                         <button type="button" id="<?php echo $row['id'];?>"  x-on:click="deleteContact" class="btn btn-danger bg-red-500 text-white w-28 h-10">Delete</button>
+                                    </td>
                                     
                                 </tr>
-                                         <?php } 
+                                    <?php } 
+                                    
                                     } else {
                                         echo "0 results";
                                     }
@@ -113,13 +121,44 @@ $result = getAllContacts($conn);
                                 
                             </tbody>
                         </table>
-                    </div>
-
+                   </div>
                     <!-- /Invoice List Table -->
             </main>
-
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <script type="text/javascript">
 
+        let csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+        function contactComponent() {
+            return {
+                deleteContact(event) {
+                    if (confirm("Do you want to delete this contact?") == false) {
+                        return false;    
+                    }
+                    const formData = new FormData();
+                    formData.csrf_token =  csrfToken;
+                    formData.contact_id = event.target.id;
+                    formData.type = 'deleteContact';
+                    fetch('/Api/index.php', {
+                        method: 'POST',
+                        headers :{
+                            'Content-Type': 'application/json'
+                        },
+                        body:JSON.stringify(formData) 
+                    })
+                    .then((res)=>res.json())
+                    .then(res=>{
+                        if(res.status){
+                            location.reload();
+                        }
+                    })
+                    .catch((error)=>{
+
+                    });
+                }
+            }
+        }
+    </script>
 </body>
-
 </html>
