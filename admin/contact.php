@@ -61,7 +61,9 @@ $result = getAllContacts($conn);
                                         </div>
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        <span class="sr-only">Subject</span>
+                                        <div class="flex items-center">
+                                            Subject
+                                        </div>
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         <div class="flex items-center">
@@ -97,7 +99,7 @@ $result = getAllContacts($conn);
                                     <td class="px-6 py-4">
                                         <?php echo $row['contact_number'];?>
                                     </td>
-                                    <td class="px-6 py-4 text-right">
+                                    <td class="px-6 py-4">
                                         <?php echo $row['subject'];?>
                                     </td>
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
